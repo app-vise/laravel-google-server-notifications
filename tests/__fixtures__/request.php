@@ -1,14 +1,14 @@
 <?php
 
+
 return json_decode('{
-        "version":"1.0",
-        "packageName":"com.some.thing",
-        "eventTimeMillis":"1503349566168",
-        "subscriptionNotification":
+    "message":
         {
-            "version":"1.0",
-            "notificationType": 1,
-            "purchaseToken":"PURCHASE_TOKEN",
-            "subscriptionId":"my.sku"
-        }
-    }', true);
+            "data":"BASE64_ENCODED_SUBSCRIPTION_MESSAGE",
+            "messageId":"873240123498612",
+            "message_id":"873240123498612",
+            "publishTime":"2019-11-20T13: 33: 40.154Z",
+            "publish_time":"2019-11-20T13: 33: 40.154Z"
+        },
+        "subscription":"SUBSCRIPTION_ID"
+}', true);

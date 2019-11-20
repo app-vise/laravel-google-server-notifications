@@ -1,0 +1,53 @@
+{
+    "name": "app-vise/laravel-google-server-notifications",
+    "description": "Handling Google play server to server notifications",
+    "keywords": [
+        "app-vise",
+        "appvise",
+        "laravel-google-server-to-server-notifications",
+        "laravel-google-server-notifications",
+        "laravel in app subscriptions",
+        "laravel-google-server-notifications"
+    ],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Daan Geurts",
+            "email": "daan@app-vise.nl",
+            "homepage": "https://www.app-vise.nl",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^7.1",
+        "illuminate/support": "^5.5|^6.0",
+        "bensampo/laravel-enum": "^1.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "~3.5.0|^4.0",
+        "phpunit/phpunit": "^7.5|^8.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Appvise\\GooglePlayNotifications\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Appvise\\GooglePlayNotifications\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit"
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Appvise\\GooglePlayNotifications\\NotificationsServiceProvider"
+            ]
+        }
+    }
+}

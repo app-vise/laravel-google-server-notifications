@@ -10,14 +10,14 @@ class NotificationsServiceProvider extends ServiceProvider
     {
         if ($this->app->runningInConsole()) {
             $this->publishes([
-                __DIR__.'/../config/google-server-notifications.php' => config_path('appstore-server-notifications.php'),
+                __DIR__.'/../config/google-server-notifications.php' => config_path('google-server-notifications.php'),
             ], 'config');
         }
 
         if (! class_exists('CreateGoogleNotificationsTable')) {
             $timestamp = date('Y_m_d_His', time());
             $this->publishes([
-                __DIR__.'/../database/migrations/create_google_notifications_table.php.stub' => database_path("migrations/{$timestamp}_create_apple_notifications_table.php"),
+                __DIR__.'/../database/migrations/create_google_notifications_table.php.stub' => database_path("migrations/{$timestamp}_create_google_notifications_table.php"),
             ], 'migrations');
         }
 
@@ -26,6 +26,6 @@ class NotificationsServiceProvider extends ServiceProvider
 
     public function register()
     {
-        $this->mergeConfigFrom(__DIR__.'/../config/google-server-notifications.php', 'appstore-server-notifications');
+        $this->mergeConfigFrom(__DIR__.'/../config/google-server-notifications.php', 'google-server-notifications');
     }
 }

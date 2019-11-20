@@ -11,7 +11,7 @@ class WebhooksController
 {
     public function __invoke(Request $request)
     {
-        $notificationData = base64_decode($request->input('message.data'));
+        $notificationData = json_decode(base64_decode($request->json('message.data')), true);
         $notificationType = $notificationData['subscriptionNotification']['notificationType'];
 
         $jobConfigKey = NotificationType::JOBS[$notificationType];

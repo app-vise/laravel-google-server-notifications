@@ -2,10 +2,10 @@
 
 namespace Appvise\GooglePlayNotifications;
 
-use Illuminate\Http\Request;
-use Appvise\GooglePlayNotifications\Model\NotificationType;
 use Appvise\GooglePlayNotifications\Exceptions\WebhookFailed;
 use Appvise\GooglePlayNotifications\Model\GoogleNotification;
+use Appvise\GooglePlayNotifications\Model\NotificationType;
+use Illuminate\Http\Request;
 
 class WebhooksController
 {

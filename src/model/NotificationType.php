@@ -19,7 +19,6 @@ class NotificationType extends Enum
         10 => 'subscription_paused', // - A subscription has been paused.
         11 => 'subscription_pause_schedule_changed', // - A subscription pause schedule has been changed.
         12 => 'subscription_revoked', // - A subscription has been revoked from the user before the expiration time.
-        13 => 'subscription_expired' // - A subscription has expired.
+        13 => 'subscription_expired', // - A subscription has expired.
     ];
-
 }

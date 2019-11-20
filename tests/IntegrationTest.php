@@ -2,9 +2,9 @@
 
 namespace Appvise\GooglePlayNotifications\Tests;
 
+use Appvise\GooglePlayNotifications\Model\GoogleNotification;
 use Illuminate\Support\Facades\Queue;
 use Illuminate\Support\Facades\Route;
-use Appvise\GooglePlayNotifications\Model\GoogleNotification;
 
 class IntegrationTest extends TestCase
 {

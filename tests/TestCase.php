@@ -2,12 +2,12 @@
 
 namespace Appvise\GooglePlayNotifications\Tests;
 
-use Exception;
-use CreateGoogleNotificationsTable;
-use Illuminate\Foundation\Exceptions\Handler;
-use Illuminate\Contracts\Debug\ExceptionHandler;
-use Orchestra\Testbench\TestCase as OrchestraTestCase;
 use Appvise\GooglePlayNotifications\NotificationsServiceProvider;
+use CreateGoogleNotificationsTable;
+use Exception;
+use Illuminate\Contracts\Debug\ExceptionHandler;
+use Illuminate\Foundation\Exceptions\Handler;
+use Orchestra\Testbench\TestCase as OrchestraTestCase;
 
 abstract class TestCase extends OrchestraTestCase
 {

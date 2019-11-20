@@ -10,7 +10,7 @@
 You can install this package via composer
 
 ```bash
-composer require app-vise/google-server-notifications 
+composer require app-vise/laravel-google-server-notifications 
  ```
 
 The service provider will register itself.

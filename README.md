@@ -1,10 +1,10 @@
 # Handle Google Play server-to-server notifications for subscriptions
 
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/tag/app-vise/laravel-appstore-server-notifications.svg?style=flat-square&sort=semver)](https://packagist.org/packages/app-vise/laravel-appstore-server-notifications)
-[![Build Status](https://travis-ci.org/app-vise/laravel-appstore-notifications.svg?branch=master)](https://travis-ci.org/app-vise/laravel-appstore-notifications)
-[![StyleCI](https://styleci.io/repos/215539443/shield?branch=master)](https://styleci.io/repos/215539443)
-[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/app-vise/laravel-appstore-notifications/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/app-vise/laravel-appstore-notifications/?branch=master)
-[![Total Downloads](https://img.shields.io/packagist/dt/app-vise/laravel-appstore-server-notifications.svg?style=flat-square)](https://packagist.org/packages/app-vise/laravel-appstore-server-notifications)
+[![Latest Version on Packagist](https://img.shields.io/packagist/v/tag/app-vise/laravel-google-server-notifications.svg?style=flat-square&sort=semver)](https://packagist.org/packages/app-vise/laravel-google-server-notifications)
+[![Build Status](https://travis-ci.org/app-vise/laravel-google-server-notifications.svg?branch=master)](https://travis-ci.org/app-vise/laravel-google-server-notifications)
+[![StyleCI](https://styleci.io/repos/222896444/shield?branch=master)](https://styleci.io/repos/222896444)
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/app-vise/laravel-google-server-notifications/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/app-vise/laravel-google-server-notifications/?branch=master)
+[![Total Downloads](https://img.shields.io/packagist/dt/app-vise/laravel-google-server-notifications.svg?style=flat-square)](https://packagist.org/packages/app-vise/laravel-google-server-notifications)
 
 ## Installation
 You can install this package via composer
@@ -17,7 +17,7 @@ The service provider will register itself.
 You have to publish the config file with:
 
 ```bash
-php artisan vendor:publish --provider="Appvise\GoogleNotifications\NotificationsServiceProvider" --tag="config" 
+php artisan vendor:publish --provider="Appvise\GooglePlayNotifications\NotificationsServiceProvider" --tag="config" 
  ```
 This is the config that will be published.
 ```php
@@ -50,7 +50,7 @@ return [
 This package logs all the incoming requests to the database so these steps are mandatory:
 
 ```bash
-php artisan vendor:publish --provider="Appvise\GoogleNotifications\NotificationsServiceProvider" --tag="migrations"
+php artisan vendor:publish --provider="Appvise\GooglePlayNotifications\NotificationsServiceProvider" --tag="migrations"
 ```
 
 You should run migrate next to create the google_notifications table:
@@ -72,7 +72,7 @@ Google will retry a couple of times more. The incoming payload is stored in the 
 ```php
 <?php
 
-namespace App\Jobs\GoogleNotifications;
+namespace App\Jobs\GooglePlayNotifications;
 
 use App\Jobs\Job;
 

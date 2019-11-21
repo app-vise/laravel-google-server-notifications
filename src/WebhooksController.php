@@ -12,6 +12,11 @@ class WebhooksController
     public function __invoke(Request $request)
     {
         $notificationData = json_decode(base64_decode($request->json('message.data')), true);
+        if (array_key_exists('testNotification', $notificationData)) {
+            GoogleNotification::storeNotification('test_notification', $request->input());
+            return response()->noContent();
+        }
+
         $notificationType = $notificationData['subscriptionNotification']['notificationType'];
 
         $jobConfigKey = NotificationType::JOBS[$notificationType];
@@ -26,6 +31,6 @@ class WebhooksController
         $job = new $jobClass($request->input());
         dispatch($job);
 
-        return response()->json();
+        return response()->noContent();
     }
 }
